@@ -64,15 +64,6 @@ container xran-users {
 
 ```
 
-A similar change needs to performed on the xran-laa.yang file, which checks for the number of secondary LAA cells:
-
-``` yang
-container laa-config {
-//  must "number-of-laa-scells <= /mcap:module-capability/mcap:band-capabilities[mcap:band-number = '46']/mcap:sub-band-info/mcap:number-of-laa-scells" {
-//    error-message "number of laa secondary cells must be less than supported number of laa scells.";
-//  }
-```
-
 
 ## Build Network Element Driver
 
@@ -154,7 +145,7 @@ Get the IPC port for the NETSIM RU
 Load the RU's operational data from the xml file using the identified IPC port, in this case 5010
 
 
-    $ env CONFD_IPC_PORT=5010 confd_load -F p -W -o confd-oper.xml
+    $ env CONFD_IPC_PORT=5010 confd_load -lC confd-<name>.xml
 
 **Success!!** You know have a NETCONF client, supporting the xRAN YANG models, and a simulated Radio Unit.
 
