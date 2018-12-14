@@ -15,4 +15,6 @@ Note - currently registration is required to download the zipped YANG model file
 
 The xRAN M-Plane specification is also available by following the above links.
 
-# this repo has now moved under nso-developer https://github.com/NSO-developer/xran-demo
+# This repo has now moved under nso-developer 
+
+https://github.com/NSO-developer/xran-demo
